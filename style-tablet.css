@@ -1,0 +1,178 @@
+@media (max-width: 1199px) {
+    .center {
+        padding-left: calc(50% - 384px);
+        padding-right: calc(50% - 384px);
+    }
+
+    .all-title {
+        font-size: 64px;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .header__menu-burger {        
+        display: flex;
+        align-items: center;
+        gap: 48px;
+    }
+
+    .header__menu-burger-checkbox {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .header__menu-burger-label {
+        display: block;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        position: relative;
+        border: none;
+        background: transparent;
+        width: 50px;
+        height: 35px;
+    }
+
+    .header__menu-burger-label::before,
+    .header__menu-burger-label::after {
+        content: '';
+        right: 0;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: #45403D;
+    }
+
+    .header__menu-burger-label::before {
+        top: 0;
+        box-shadow: 0 15px 0 #45403D;
+        transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+    }
+
+    .header__menu-burger-label::after {
+        bottom: 0;
+        transition: bottom .3s .15s, transform .3s;
+    }
+
+    .header__menu-burger-checkbox:checked + .header__menu-burger-label::before {
+        top: 14px;
+        transform: rotate(45deg);
+        box-shadow: 0 0 0 #45403D;
+        transition: box-shadow .15s, top .3s, transform .3s .15s;
+    }
+
+    .header__menu-burger-checkbox:checked + .header__menu-burger-label::after {
+        bottom: 16px;
+        transform: rotate(-45deg);
+        transition: bottom .3s, transform .3s .15s;
+    }
+
+    .header__menu-list {
+        top: 120px;
+        right: calc(50% - 384px);
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 55px 0;
+        margin: 0;
+        background-color: #45403D;
+        list-style-type: none;
+        transform: translateY(-135%);
+        transition: .3s;
+        width: 350px;
+    }
+
+    .header__menu-item {
+        color: #FFFFFF;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    .header__menu-item:hover {
+        background-color: #45403D;
+    }
+
+    .header__menu-burger-checkbox:checked ~ .header__menu-list {
+        transform: translateX(0);
+    }
+
+
+
+    /* __________  main  __________ */
+    .main {
+        height: 830px;
+    }
+
+    .main__info {
+        width: 715px;
+    }
+
+    .main__heading {
+        font-size: 36px;
+    }
+
+    .main__text {
+        font-size: 24px;
+    }
+
+    .main__img {
+        display: none;
+    }
+
+
+    /* __________  section (О нас)  __________ */
+    .about-us {
+        height: auto;
+        padding-bottom: 64px;
+    }
+
+    .about-us__block {
+        width: 100%;
+    }
+
+    .about-us__img {
+        width: 40%;
+    }
+
+    .about-us__info {
+        width: 60%;
+    }
+
+    .about-us__heading {
+        font-size: 36px;
+    }
+
+    .about-us__text {
+        font-size: 16px;
+    }
+
+
+    /* __________  section (Меню)  __________ */
+    .menu__coffee {
+        grid-column: span 4;
+    }
+
+
+    /* __________  section (Отзывы)  __________ */
+    .reviews__block-review {
+        grid-column: span 6;
+    }
+
+
+    /* __________  section (Контакты и карта)  __________ */
+    .contacts-map__info {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 319px 514px;
+        grid-template-areas:
+            'contacts booking booking booking'
+            'map map map map';
+        grid-column-gap: 20px;
+        grid-row-gap: 14px;
+    }
+}
