@@ -153,7 +153,7 @@
 
 
     /* __________  section (Меню)  __________ */
-    .menu__coffee {
+    .menu__all {
         grid-column: span 4;
     }
 

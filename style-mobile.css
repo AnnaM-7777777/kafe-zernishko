@@ -89,7 +89,7 @@
         gap: 24px;
     }
 
-    .menu__links {
+    .menu__buttons {
         width: 100%;
         justify-content: space-between;
         border-radius: 24px;
@@ -99,7 +99,7 @@
         padding: 0 32px;
     }
 
-    .menu__link {
+    .menu__btn {
         width: auto;
         border: none;
         font-size: 18px;
@@ -110,7 +110,7 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .menu__coffee {
+    .menu__all {
         grid-column: span 2;
     }
 
@@ -177,15 +177,15 @@
     
     
     /* __________  section (Меню)  __________ */
-    .menu__coffee {
+    .menu__all {
         grid-column: span 4;
     }
 
-    .menu__links {
+    .menu__buttons {
         padding: 0 24px;
     }
 
-    .menu__link {
+    .menu__btn {
         font-size: 14px;
     }
 
