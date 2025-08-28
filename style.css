@@ -629,6 +629,7 @@ svg:hover {
     border: 1px solid #DEDEDE;
     padding: 0 24px;
     box-sizing: border-box;
+    outline: none;
 }
 
 .contacts-map__input::placeholder {
@@ -648,6 +649,13 @@ svg:hover {
     font-family: 'Montserrat Alternates', sans-serif;
     margin-top: 17px;
     background-color: #ffffff00;
+    transition: background-color 0.4s ease;
+    cursor: pointer;
+}
+
+.contacts-map__btn-send:hover {
+    background-color: #A26539;
+    color: #FFFFFF;
 }
 
 .contacts-map__map {
