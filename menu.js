@@ -1,37 +1,34 @@
-document.getElementById('btn1').addEventListener('click', function() {
-            showSection('section1');
-        });
 
-        document.getElementById('btn2').addEventListener('click', function() {
-            showSection('section2');
-        });
+document.getElementById('menuButton1').addEventListener('click', function() {
+    showSection('section1');
+});
 
-        document.getElementById('btn3').addEventListener('click', function() {
-            showSection('section3');
-        });
+document.getElementById('menuButton2').addEventListener('click', function() {
+    showSection('section2');
+});
 
-        function showSection(sectionId) {
-            // Скрываем все разделы
-            var sections = document.getElementsByClassName('hidden');
-            for (var i = 0; i < sections.length; i++) {
-                sections[i].style.display = 'none';
-            }
+document.getElementById('menuButton3').addEventListener('click', function() {
+    showSection('section3');
+});
 
-            // Показываем выбранный раздел
-            document.getElementById(sectionId).style.display = 'grid';
+function showSection(sectionId) {
+    
+    let sections = document.getElementsByClassName('hidden'); // Скрываем все разделы
+    for (let i = 0; i < sections.length; i++) {
+        sections[i].style.display = 'none';
+    }
+    
+    document.getElementById(sectionId).style.display = 'grid'; // Показываем выбранный раздел
+    
+    let buttons = document.getElementsByClassName('menu__btn'); // Убираем класс active-btn у всех кнопок
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove('active-btn');
+    }
+    
+    document.getElementById('menuButton' + sectionId.slice(-1)).classList.add('active-btn'); // Добавляем класс active-btn текущей кнопке
+}
 
-            // Убираем класс active у всех кнопок
-            var buttons = document.getElementsByClassName('menu__btn');
-            for (var i = 0; i < buttons.length; i++) {
-                buttons[i].classList.remove('active');
-            }
-
-            // Добавляем класс active текущей кнопке
-            document.getElementById('btn' + sectionId.slice(-1)).classList.add('active');
-        }
-
-        // При загрузке страницы показываем первый раздел и выделяем первую кнопку
-        window.onload = function() {
-            showSection('section1');
-            document.getElementById('btn1').classList.add('active');
-        }
+window.onload = function() {
+    showSection('section1');
+    document.getElementById('menuButton1').classList.add('active-btn'); // При загрузке страницы показываем первый раздел и выделяем первую кнопку
+}
